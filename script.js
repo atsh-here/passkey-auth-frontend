@@ -3,7 +3,7 @@ const CONFIG = {
     // For local development
     API_BASE: window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
         ? 'http://localhost:3000/api' 
-        : 'https://your-backend-url.onrender.com/api', // Replace with your Render backend URL
+        : 'https://passkey-auth-backend.onrender.com/api', // Replace with your Render backend URL
 
     // For GitHub Pages deployment, you'll need to update this URL
     // Example: 'https://your-backend-name.onrender.com/api'
