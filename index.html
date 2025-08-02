@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passkey Authentication System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-card">
+            <div class="header">
+                <i class="fas fa-fingerprint"></i>
+                <h1>Secure Authentication</h1>
+                <p>Sign in with your passkey for enhanced security</p>
+            </div>
+
+            <div class="form-container">
+                <!-- Registration Form -->
+                <div id="register-form" class="form-section">
+                    <h2>Create Account</h2>
+                    <form id="registration-form">
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="register-username" placeholder="Username" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="register-email" placeholder="Email" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-id-card"></i>
+                            <input type="text" id="register-displayname" placeholder="Display Name" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-key"></i>
+                            Create Passkey
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Login Form -->
+                <div id="login-form" class="form-section active">
+                    <h2>Sign In</h2>
+                    <form id="login-form-element">
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="login-username" placeholder="Username" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-fingerprint"></i>
+                            Sign In with Passkey
+                        </button>
+                    </form>
+                    <button id="authenticate-without-username" class="btn btn-secondary">
+                        <i class="fas fa-magic"></i>
+                        Sign In Without Username
+                    </button>
+                </div>
+
+                <!-- Success/Profile Section -->
+                <div id="profile-section" class="form-section">
+                    <div class="profile-info">
+                        <i class="fas fa-check-circle success-icon"></i>
+                        <h2>Welcome!</h2>
+                        <div id="user-info"></div>
+                        <button id="logout-btn" class="btn btn-secondary">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="toggle-forms">
+                <button id="show-register" class="toggle-btn">Create New Account</button>
+                <button id="show-login" class="toggle-btn active">Sign In</button>
+            </div>
+
+            <div class="status-message" id="status-message"></div>
+        </div>
+
+        <div class="info-section">
+            <h3><i class="fas fa-shield-alt"></i> What are Passkeys?</h3>
+            <ul>
+                <li><strong>More Secure:</strong> Passkeys use public-key cryptography, making them resistant to phishing and data breaches.</li>
+                <li><strong>More Convenient:</strong> No passwords to remember or type. Use your device's biometric authentication.</li>
+                <li><strong>Cross-Platform:</strong> Works across different devices and platforms seamlessly.</li>
+                <li><strong>Privacy-Focused:</strong> Your biometric data never leaves your device.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
